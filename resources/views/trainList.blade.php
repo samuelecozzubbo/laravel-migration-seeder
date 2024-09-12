@@ -20,7 +20,7 @@
                         <th>{{ $train->id }}</th>
                         <td>{{ $train->departure_station }}</td>
                         <td>{{ $train->arrive_station }}</td>
-                        <td>{{ $train->departure_date }}</td>
+                        <td>{{ substr($train->departure_date, 0, 10) }}</td>
                         <td>{{ $train->departure_time }}</td>
                     </tr>
                 @endforeach
