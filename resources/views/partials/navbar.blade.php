@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Layout base</a>
+        <a class="navbar-brand" href="/">
+            <img src="{{ Vite::asset('resources/img/logo.jpg') }}" alt="Logo" width="80" height="50"
+                class="d-inline-block align-text-top rounded">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

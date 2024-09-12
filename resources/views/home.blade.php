@@ -7,6 +7,7 @@
         <p>
             Vedi i treni in partenza oggi
         </p>
+        <a href={{ route('trainList') }} class="btn btn-warning">Vai ai treni</a>
     </div>
 @endsection
 
