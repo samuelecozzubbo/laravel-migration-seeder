@@ -21,4 +21,10 @@ class PageController extends Controller
     {
         return view('contacts');
     }
+
+    public function trainList()
+    {
+        $trains = Train::whereDate('departure_date', '=', '2024-09-12')->orderBy('departure_time')->get();
+        return view('trainList', compact('trains'));
+    }
 }
