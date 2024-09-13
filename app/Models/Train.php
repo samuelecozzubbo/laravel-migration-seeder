@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Train extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'departure_date' => 'datetime',
+        'departure_time' => 'datetime',
+    ];
 }

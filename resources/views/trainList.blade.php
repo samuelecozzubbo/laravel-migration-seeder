@@ -17,11 +17,20 @@
             <tbody>
                 @foreach ($trains as $train)
                     <tr>
+                        @php
+                            $departure_time = date_create($train->departure_time);
+                        @endphp
                         <th>{{ $train->id }}</th>
                         <td>{{ $train->departure_station }}</td>
                         <td>{{ $train->arrive_station }}</td>
-                        <td>{{ substr($train->departure_date, 0, 10) }}</td>
-                        <td>{{ $train->departure_time }}</td>
+                        {{-- <td>{{ substr($train->departure_date, 0, 10) }}</td> --}}
+                        {{-- Ho trasformato departure date da stringa a datetime usando il
+                        metodo carbon dentro al model e poi stampo con format
+                        Poteco anche fare un tag php qua usando date_create e poi format --}}
+                        {{-- https://www.w3schools.com/php/func_date_date_format.asp --}}
+                        {{--  NB ESISTE LA FUNZIONE STRTOTIME --}}
+                        <td>{{ $train->departure_date->format('Y-m-d') }}</td>
+                        <td>{{ date_format($departure_time, 'H:i') }}</td>
                     </tr>
                 @endforeach
             </tbody>
