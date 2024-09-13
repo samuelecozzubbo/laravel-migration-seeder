@@ -12,6 +12,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="{{ route('home') }}">Home</a>
                 <a class="nav-link" href="{{ route('trainList') }}">Treni in partenza</a>
+                <a class="nav-link" href="{{ route('travelPackList') }}">I nostri pacchetti viaggio</a>
                 <a class="nav-link" href="{{ route('about') }}">Chi siamo</a>
                 <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
             </div>

@@ -18,3 +18,4 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/chi-siamo', [PageController::class, 'about'])->name('about');
 Route::get('/contatti', [PageController::class, 'contacts'])->name('contacts');
 Route::get('/train-departure', [PageController::class, 'trainList'])->name('trainList');
+Route::get('/travel-pack', [PageController::class, 'travelPackList'])->name('travelPackList');

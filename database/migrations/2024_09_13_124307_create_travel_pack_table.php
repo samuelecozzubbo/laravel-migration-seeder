@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('travel_pack', function (Blueprint $table) {
+        Schema::create('travel_packs', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
+            $table->string('slug', 255)->unique();
             $table->string('destination', 255);
             $table->text('description');
             $table->dateTime('departure_date');
